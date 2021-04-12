@@ -166,11 +166,11 @@ for runid in runids:
                                         sim_t_max= t_obs_start + duration
 
 
-                                    
+
                                     #selection of e_min according  to the irf value
                                     if 'z60' in name_irf:
                                         sim_e_min=0.03
-                                        #name_irf=f'{site}_z40_5h'
+                                        name_irf=f'{site}_z40_5h'
                                     else:
                                         sim_e_min=0.03
                                     print (f'Irf : {name_irf}')
