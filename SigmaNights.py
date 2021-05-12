@@ -1,29 +1,17 @@
-import sys
 import os
-from os.path import join, isfile, isdir
-import gammalib
+from os.path import join, isfile
 import ctools
 import cscripts
-import gammapy
-from astropy.io import fits
 import numpy as np
-import math as m
-import astropy
 import astropy.units as u
 from astropy.time import Time
-from astropy.table import Table
-from astropy.coordinates import SkyCoord, EarthLocation
-from astropy.utils import iers
 from astropy.io import fits
-import warnings
 import argparse
 import yaml
-import logging
-import numpy as np
 import glob
 
 
-parser = argparse.ArgumentParser(description='TThe significance of a GRB observation is computed at different IRFs according to a visibility tabele, created with runCatVisibility.py. A configuation YAML file is required, the output is saved as NPY binary file.')
+parser = argparse.ArgumentParser(description='The significance of a GRB observation is computed at different IRFs according to a visibility tabele, created with runCatVisibility.py. A configuation YAML file is required, the output is saved as NPY binary file.')
 parser.add_argument('-f', '--config', required=True, type=str, help='configuration yaml file')
 # configuration file
 cf = parser.parse_args().config
@@ -52,7 +40,7 @@ if cfg['path']['xmlfilename'] == None:
 
 elif type(cfg['path']['xmlfilename']) == str:
     if not isfile(join(catalog, cfg['path']['xmlfilename'])):
-            raise ValueError(f'Specified template {runid} does not exist in catalog')
+            raise ValueError(f'Specified template does not exist in catalog')
     runids = [cfg['path']['xmlfilename']]
 else:
     runids = cfg['path']['xmlfilename']
@@ -66,8 +54,9 @@ runids = sorted(runids)
 data= np.load(output, allow_pickle=True, encoding='latin1', fix_imports=True).flat[0]
 events = list(data.keys())
 sites = list(data[events[0]].keys())
-#data = table.copy()
-####--------------function to append new line to txt file
+
+
+#------------------------------------------------function to append new line to txt file
 def append_new_line(file_name, text_to_append):
     """Append given text as a new line at the end of file"""
     # Open the file in append & read mode ('a+')
@@ -91,7 +80,6 @@ seeds = np.random.randint(1,1000,size=cfg['ctools']['iterations'])
 #simulation variables
 caldb=cfg['ctools']['caldb']
 sim_rad = cfg['ctools']['rad']
-#sim_e_max=cfg['ctools']['Emax']
 fitmodel=cfg['ctools']['fitmodel']
 #duration of simulation ( da sistemare, potrei voler simulare tutto l'intervallo)
 duration = cfg['ctools']['duration']
@@ -104,7 +92,7 @@ for runid in runids:
 
     elif cfg['path']['xmlfilename'] == None:
         inmodel = runid
-
+#------------------------------------------------Running on EVENTS
 
     for event in events:
 
@@ -118,67 +106,89 @@ for runid in runids:
                     t_trigger = Time(hdr['GRBJD'] * u.day, format='jd')
                     trigger=float(t_trigger.jd)
 
+#----------------------------------------------------Running on SITES
 
             for site in sites:
                 if site == 'North':
                     print(f'\nProcessing site {site}')
+#----------------------------------------------------Running on NIGHTS
                     for night in data[event][site]:
                         print(f'\nProcessing {night}')
+
+#---------------------------------Making sure that the source is visible
                         if type(data[event][site]) == float:
                             print(f'\tThis contains NaNs ---> the source is not observable due to daylight or moon.')
                         if data[event][site][night]['irfs']['zref'][0] == -9.0:
                             print(f'\tThis contains NaNs event---> the source is not observable at the site.')
                             data[event][site][night]['sigma_ON/OFF'] = -9.0
-
+#-------------------------------------------Simulation and analysis of VISIBLE sources
                         else:
-                            t_obs_start= data[event][site][night]['irfs']['start'][0]
-                            t_obs_start=(t_obs_start - trigger)*86400
+                            t_obs_start = data[event][site][night]['irfs']['start'][0]
+                            t_obs_start = (t_obs_start - trigger)*86400
 
-                            on_counts=np.zeros(shape=len(seeds))
-                            off_counts=np.zeros(shape=len(seeds))
-                            valore=np.zeros(shape=len(seeds))
-                            radice=np.zeros(shape=len(seeds))
+                            on_counts = np.zeros(shape=len(seeds))
+                            off_counts = np.zeros(shape=len(seeds))
+                            valore = np.zeros(shape=len(seeds))
+                            radice = np.zeros(shape=len(seeds))
+
+#----------------------------------------------------Running on SEEDS
+
                             for j, seed in enumerate(seeds):
                                 seed = int(seed)
                                 print(f'\nseed number {j+1}: {seed}')
 
-
-                                somma_on=np.zeros(shape=len(data[event][site][night]['irfs']['zref']))
-                                somma_off=np.zeros(shape=len(data[event][site][night]['irfs']['zref']))
+                                somma_on = np.zeros(shape=len(data[event][site][night]['irfs']['zref']))
+                                somma_off = np.zeros(shape=len(data[event][site][night]['irfs']['zref']))
 
                                 for i in range(len(data[event][site][night]['irfs']['zref'])):
-                                    t_min = data[event][site][night]['irfs']["start"][i]
-                                    t_max= data[event][site][night]['irfs']["stop"][i]
 
-                                    name_irf = (f'{site}_z{data[event][site][night]["irfs"]["zref"][i]}_0.5h')
+                                    #-----------------SIMULATION TIMES in second from trigger
+                                    t_min = data[event][site][night]['irfs']["start"][i]
+                                    t_max = data[event][site][night]['irfs']["stop"][i]
 
                                     #converting times from jd to seconds from trigger
-                                    sim_t_min=(t_min - trigger)*86400
-                                    sim_t_stop=(t_max - trigger)*86400
+                                    sim_t_min = (t_min - trigger)*86400
+                                    sim_t_stop = (t_max - trigger)*86400
+
 
                                     if sim_t_min > t_obs_start+duration:
-                                        somma_on[i]=0.
-                                        somma_off[i]=0.
+                                        somma_on[i] = 0.
+                                        somma_off[i] = 0.
                                         break
                                     elif sim_t_stop - t_obs_start < duration:
-                                        sim_t_max=sim_t_stop
+                                        sim_t_max = sim_t_stop
                                     else:
-                                        sim_t_max= t_obs_start + duration
+                                        sim_t_max = t_obs_start + duration
+
+                                    print (sim_t_min)
+                                    print (sim_t_max)
+                                    #----------- IRF definition
+                                    delta_t_irf = sim_t_stop - sim_t_min
+                                    if delta_t_irf < 94.9 * 60:
+                                        irf_duration = '0.5h'
+                                    elif 94.9 * 60 < delta_t_irf < 15.8 * 60 * 60:
+                                        irf_duration = '5h'
+                                    elif delta_t_irf > 15.8 * 60 * 60:
+                                        irf_duration = '50h'
+                                    
+                                    name_irf = (f'{site}_z{data[event][site][night]["irfs"]["zref"][i]}_{irf_duration}')
 
 
-
-                                    #selection of e_min according  to the irf value
+                                    #-------------selection of e_min and e_max according  to the irf value
                                     if 'z60' in name_irf:
-                                        sim_e_min=0.03
-                                        name_irf=f'{site}_z40_5h'
+                                        sim_e_min = 0.04
+                                        name_irf = f'{site}_z40_5h'
+                                    elif 'z40' in name_irf:
+                                        sim_e_min = 0.04
+
                                     else:
-                                        sim_e_min=0.03
+                                        sim_e_min = 0.03
                                     print (f'Irf : {name_irf}')
                                     if 'z20' in name_irf:
-                                        sim_e_max=10.
+                                        sim_e_max = 10.
                                     else:
-                                        sim_e_max=5.6234
-                    #-----------------------------------------------------------------------Simulation
+                                        sim_e_max = 5.6234
+#-----------------------------------------------------------------------Simulation
                                     sim = ctools.ctobssim()
                                     sim['inmodel'] = inmodel
                                     sim['caldb'] = caldb
@@ -246,47 +256,44 @@ for runid in runids:
                                         off.close()
                                     #somma_off[i] = somma_off[i]/(a*1.0)
 
-                                    a=1/a
+                                a = 1/a
 
-                                on_counts[j]=np.sum(somma_on)
-                                off_counts[j]=np.sum(somma_off)
+#-----------summing up all counts for different 'irf-sections' of the simulation
+                                on_counts[j] = np.sum(somma_on)
+                                off_counts[j] = np.sum(somma_off)
 
                                 print (f'\n\tNumber of counts (per {night}) in the on region: {on_counts[j]}')
                                 print (f'\tNumber of counts (per {night}) per off region: {off_counts[j]}')
 
-
+#------------------------Computing SIGNIFICANCE with Li and Ma formula
 
                                 try:
                                     valore[j] = 2*(on_counts[j] * np.log(((1+a)/a)*(on_counts[j]/(off_counts[j]+on_counts[j]))) + off_counts[j] * np.log((1+a)*(off_counts[j]/(off_counts[j]+on_counts[j]))))
                                     if valore[j] < 0:
                                         valore[j] = 0
-                                    radice[j]=np.sqrt(valore[j])
+                                    radice[j] = np.sqrt(valore[j])
                                 except ValueError:
-
                                     continue
 
                                 print (f'\n\tSignificance site {site},{night}, seed {seed} :{radice[j]}')
 
+#-----------------------Mean values over the N simulations (N is defined in the iterations key of config.yaml file)
 
-                            media_on=np.mean(on_counts)
-                            media_off=np.mean(off_counts)
-                            var_on=np.std(on_counts)
-                            var_off=np.std(off_counts)
+                            media_on = np.mean(on_counts)
+                            media_off = np.mean(off_counts)
+                            var_on = np.std(on_counts)
+                            var_off = np.std(off_counts)
                             sigma = np.mean(radice)
                             var = np.std(radice)
                             data[event][site][night]['sigma_ON/OFF'] = sigma
                             data[event][site][night]['sigma_var'] = var
                             print (f'\n\tMean significance, site {site}, {night}: {sigma}, variance: {var}')
-                            #print (f'\tMean counts ON: {media_on}, mean counts OFF: {media_off}')
 
-                            sigma_mean_counts=np.sqrt ( 2*(media_on * m.log(((1+a)/a)*(media_on/(media_off+media_on))) + media_off * m.log((1+a)*(media_off/(media_off+media_on)))))
+                            sigma_mean_counts = np.sqrt( 2*(media_on * np.log(((1+a)/a)*(media_on/(media_off+media_on))) + media_off * np.log((1+a)*(media_off/(media_off+media_on)))))
 
-                            details = (f"{event}, {site}, {night}, {duration}, {media_on}, {var_on}, {media_off},{var_off}, {sigma}, {var}")
-
+                            details = (f"{event}, {site}, {night}, {duration}, {media_on}, {var_on}, {media_off}, {var_off}, {sigma}, {var}")
+#-------------------------------------appending 'details' to a .txt file
                             append_new_line('details.txt', details)
 
 
-#print (f"{nn} events out of {n+1} can't be detected by CTA North")
-#print (f"{ss} events out of {n+1} can't be detected by CTA South")
-#print (data)
 np.save(cfg['path']['sigmaoutput'] , data)

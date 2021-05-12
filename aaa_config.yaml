@@ -1,0 +1,27 @@
+# path configuration
+path:
+  # template (or list of templates) --> null if you want to run an entire catalog
+  filename: 
+  # folder where templates are stored 
+  catalog: /home/irene/cta/input/afterglow
+  # output where visibility table will be saved (used also as input for signigficance calculation)
+  output: /home/irene/provepy/VisCat/LONG_FITS.noMoon.thresh10.NEW.npy
+  # input XML model --> null if you want to run an entire catalog
+  xmlfilename:  model_Event751.xml
+  # folder where input XML models are stored (the program looks for xml files even in subdirectories) --> null if you want to run a single template 
+  xmlcatalog: /home/irene/cta/models/afterglow/Event751
+  sigmaoutput: /home/irene/provepy/old/soglie/3sigma.noMoon.thresh10.5ssteps.npy
+#parameters to use for simulation with ctools
+ctools:
+ #simulation radius
+   rad: 5.0
+ #xml model to be used for likelihood
+   fitmodel: /home/irene/cta/template/GRB_expcut_v1.xml 
+ #calibration database       
+   caldb: prod3b-v2
+ #seed
+   offset: 0.6
+   radius: 0.2
+   timestep: 10.
+
+
