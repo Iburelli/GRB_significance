@@ -70,13 +70,14 @@ for runid in runids:
                     for night in data[event][site]:
                         if night == 'night01':
                             print(f'\nProcessing {night}')
-                            results[event][site][night]={'irf':[], 'time_slices':[], 'significance':[], 'variance':[]}
+                            results[event][site][night]={'irf':[],'t_start':[],  't_stop':[], 'significance':[], 'variance':[]}
                             # ----------------------------------Checking visibility at the site during a specific night
                             if data[event][site][night]['irfs']['zref'][0] == -9.0:
                                 print(f'\tThis contains NaNs event---> the source is not observable at the site.')
 
                                 results[event][site][night]['irf'] = -9.0
-                                results[event][site][night]['time_slices'] = -9.0
+                                results[event][site][night]['t_start'] = -9.0
+                                results[event][site][night]['t_stop'] = -9.0
                                 results[event][site][night]['significance'] = -9.0
                                 results[event][site][night]['variance'] = -9.0
 
@@ -270,7 +271,8 @@ for runid in runids:
                                     print('\n')
 
                                     results[event][site][night]['irf'].append(name_irf)
-                                    results[event][site][night]['time_slices'].append(t_slice_stop)
+                                    results[event][site][night]['t_start'].append(t_slice_start)
+                                    results[event][site][night]['t_stop'].append(t_slice_stop)
                                     results[event][site][night]['significance'].append(mean_sigma)
                                     results[event][site][night]['variance'].append(var)
 
