@@ -259,8 +259,8 @@ for runid in runids:
                                             break
 
 
-                                    details = (f"{event}, {site}, {night},{t_slice_stop - t_obs_start}, {mean_sigma}, {previous_on}, {previous_off}")
-                                    append_new_line('energy_regions_test.txt', details)
+                                    #details = (f"{event}, {site}, {night},{t_slice_stop - t_obs_start}, {mean_sigma}, {previous_on}, {previous_off}")
+                                    #append_new_line(f'Significance_{event}.txt', details)
 
                                     print(f'\n\t{event} - site {site} - {night}')
                                     print(f'\tInterval {j + 1}, sim start time: {t_slice_start - t_obs_start}, sim_t_stop: {t_slice_stop - t_obs_start}')
