@@ -9,7 +9,7 @@ path:
   # input XML model --> null if you want to run an entire catalog
   xml_filename: model_Event751.xml
   # folder where input XML models are stored (the program looks for xml files even in subdirectories) 
-  xml_dir: /home/irene/cta/models/afterglow/Event751
+  xml_dir: /home/irene/github/ctools/models/afterglow/Event751
   #output where significance table will be saved
   sigmaoutput: /home/irene/provepy/tests/Evt751.South.iterations.noMoon.thresh10.npy
 #parameters to use for simulation with ctools
