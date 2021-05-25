@@ -12,7 +12,7 @@ XML models for GRB afterglows are obtained with Thomas pipeline (https://github.
 
 Fits models of the afterglows are also needed to extract TRIGGER time. Files not uploaded here. 
 
-##Visibility tables
+## Visibility tables
 
 Visibility tables must be given as an input. These tables are generated with Ambra's script: https://github.com/cta-rta/ctools-sci-grb. Pay attention to the tables details, to make sure they fit with your needs (Moon, threshold altitude)
 
