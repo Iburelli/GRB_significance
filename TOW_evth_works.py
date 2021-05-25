@@ -7,7 +7,7 @@ from astropy.io import fits
 import argparse
 import yaml
 import numpy as np
-from functions import append_new_line, irf_selection, read_input_file
+from TOW_functions import append_new_line, irf_selection, read_input_file
 
 parser = argparse.ArgumentParser(description='The significance of a GRB observation is computed at different IRFs according to a visibility table, created with runCatVisibility.py. A configuration YAML file is required, the output is saved as NPY binary file.')
 parser.add_argument('-f', '--config', required=True, type=str, help='configuration yaml file')

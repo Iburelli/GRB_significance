@@ -18,8 +18,6 @@ ctools:
    emax : 10.0
    #simulation radius
    rad: 5.0
-   #xml model to be used for likelihood
-   fitmodel: /home/irene/cta/template/GRB_expcut_v1.xml 
    #calibration database       
    caldb: prod3b-v2
    #number of times the simulation will be iterated
