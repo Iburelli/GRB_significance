@@ -7,7 +7,7 @@ from astropy.io import fits
 import argparse
 import yaml
 import numpy as np
-from TOW_functions import append_new_line, irf_selection, read_input_file
+from TOW_functions import irf_selection, read_input_file
 
 parser = argparse.ArgumentParser(description='The significance of a GRB observation is computed at different IRFs according to a visibility table, created with runCatVisibility.py. A configuration YAML file is required, the output is saved as NPY binary file.')
 parser.add_argument('-f', '--config', required=True, type=str, help='configuration yaml file')
@@ -103,6 +103,8 @@ for runid in runids:
                                     on_counts = np.zeros(shape=len(seeds))
                                     off_counts = np.zeros(shape=len(seeds))
                                     sigma = np.zeros(shape=len(seeds))
+                                    det3=0
+                                    det5=0
                                     for k, seed in enumerate(seeds):
                                         seed = int(seed)
                                         print(f'\nseed number {k + 1}: {seed}')
@@ -236,6 +238,13 @@ for runid in runids:
                                         if sigma[k] < 0:
                                             sigma[k] = 0
                                         sigma[k] = np.sqrt(sigma[k])
+
+                                        # counting number of times sigma is greater than threshold. The goal is to check if this is true 90% of times
+                                        if sigma[k]>= 3:
+                                            det3+=1
+                                        if sigma[k]>= 5:
+                                            det5+=1
+
                                     previous_on = np.mean(on_counts)
                                     previous_off = np.mean(off_counts)
 
@@ -247,35 +256,33 @@ for runid in runids:
                                     mean_sigma = round(mean_sigma, 2)
                                     var = round(var, 2)
 
+                                    detection_threshold = 90*cfg['ctools']['iterations']/100
 # -----------------------------------------------------------------------------------------------3 sigma detection
-
-                                    if mean_sigma >=3 and '3sigma' not in results[event][site][night].keys():
+                                    if det3 >=detection_threshold and '3sigma' not in results[event][site][night].keys():
                                         results[event][site][night]['3sigma'] = [t_slice_stop,mean_sigma]
                                         if cfg['ctools']['3sigma_stop'] == True:
                                             break
 # -----------------------------------------------------------------------------------------------5 sigma detection
-                                    if mean_sigma >=5 and '5sigma' not in results[event][site][night].keys():
+                                    if det5 >=detection_threshold and '5sigma' not in results[event][site][night].keys():
                                         results[event][site][night]['5sigma'] = [t_slice_stop,mean_sigma]
                                         if cfg['ctools']['5sigma_stop'] == True:
                                             break
-
-
-                                    #details = (f"{event}, {site}, {night},{t_slice_stop - t_obs_start}, {mean_sigma}, {previous_on}, {previous_off}")
-                                    #append_new_line(f'Significance_{event}.txt', details)
-
+# -----------------------------------------------------------------------------------------------------------------
                                     print(f'\n\t{event} - site {site} - {night}')
                                     print(f'\tInterval {j + 1}, sim start time: {t_slice_start - t_obs_start}, sim_t_stop: {t_slice_stop - t_obs_start}')
                                     print(f'\tResponse function:{name_irf}, Energy: {sim_e_min} - {sim_e_max}')
                                     print(f'\tTime from trigger: {t_slice_stop}, significance: {mean_sigma}')
                                     print(f'\tOn region counts: {previous_on}, Off region counts: {previous_off}')
                                     print('\n')
-
+# -----------------------------------------------------------------------------------------------------------------
                                     results[event][site][night]['irf'].append(name_irf)
                                     results[event][site][night]['t_start'].append(t_slice_start)
                                     results[event][site][night]['t_stop'].append(t_slice_stop)
                                     results[event][site][night]['significance'].append(mean_sigma)
                                     results[event][site][night]['variance'].append(var)
-
+# -----------------------------------------------------------------------------------------------------------------
                                     t_slice_start = t_slice_stop
                                     if t_slice_start >= t_obs_stop:
                                         break
+
+np.save(cfg['path']['sigmaoutput'] , results)
