@@ -29,7 +29,7 @@ pointing_delay = cfg['ctools']['pointing_delay']
 n = cfg['ctools']['off_regions']
 
 # ------------------------------------------------------------------------generating random seeds
-seeds = [601]#np.random.randint(1, 1000, size=cfg['ctools']['iterations'])  # [849,313,923]
+seeds = np.random.randint(1, 1000, size=cfg['ctools']['iterations'])  # [849,313,923]
 # -------------------------------------------------------------------defining some useful paths
 catalog = read_input_file(xml_files_location, xml_filename, vis_cat_location)[0]  # location of xml files directories
 visibility_table = read_input_file(xml_files_location, xml_filename, vis_cat_location)[1]  # location of visibility table
@@ -70,7 +70,7 @@ for runid in runids:
                     for night in data[event][site]:
                         if night == 'night01':
                             print(f'\nProcessing {night}')
-                            results[event][site][night]={'irf':[],'t_start':[],  't_stop':[], 'significance':[], 'variance':[]}
+                            results[event][site][night]={'irf':[],'t_start':[],  't_stop':[], 'significance':[], 'variance':[], '3sigma':[],'5sigma':[]}
                             # ----------------------------------Checking visibility at the site during a specific night
                             if data[event][site][night]['irfs']['zref'][0] == -9.0:
                                 print(f'\tThis contains NaNs event---> the source is not observable at the site.')
