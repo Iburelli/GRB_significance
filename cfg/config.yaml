@@ -1,17 +1,17 @@
 # path configuration
 path:
   # template (or list of templates) --> null if you want to run an entire catalog
-  filename: 
+  filename: template.fits
   # folder where templates are stored 
-  catalog: /home/irene/cta/input/afterglow
+  catalog: path/to/templates/folder
   # output where visibility table will be saved (used also as input for signigficance calculation)
-  output: /home/irene/provepy/VisCat/LONG_FITS.noMoon.thresh10.NEW.npy
+  output: path/to/visibility/output.npy
   # input XML model --> null if you want to run an entire catalog
-  xml_filename: model_Event54.xml
+  xml_filename: model_Event*.xml
   # folder where input XML models are stored (the program looks for xml files even in subdirectories) 
-  xml_dir: /home/irene/github/ctools/models/afterglow/Event54
+  xml_dir:  path/to/xml_models/folder
   #output where significance table will be saved
-  sigmaoutput: /home/irene/github/ctools/Evt54.North.noMoon.thresh10.npy
+  sigmaoutput: path/to/significance/output.npy
 #parameters to use for simulation with ctools
 ctools:
    #maximum value of energy up to wich simualte (TeV)
