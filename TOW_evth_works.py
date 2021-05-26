@@ -68,9 +68,9 @@ for runid in runids:
                     results[event][site]={}
                     # ----------------------------------------------------Running on NIGHTS
                     for night in data[event][site]:
-                        if night == 'night01':
+                        if night == 'night02':
                             print(f'\nProcessing {night}')
-                            results[event][site][night]={'irf':[],'t_start':[],  't_stop':[], 'significance':[], 'variance':[], '3sigma':[],'5sigma':[]}
+                            results[event][site][night]={'irf':[],'t_start':[],  't_stop':[], 'significance':[], 'variance':[]}
                             # ----------------------------------Checking visibility at the site during a specific night
                             if data[event][site][night]['irfs']['zref'][0] == -9.0:
                                 print(f'\tThis contains NaNs event---> the source is not observable at the site.')
@@ -98,7 +98,7 @@ for runid in runids:
                                 previous_off = 0.0
 
                                 for j in range(50):
-                                    t_slice_stop = t_slice_start + 10 * (j + 2) * np.log10(10 * (j + 2))
+                                    t_slice_stop = t_slice_start + 10 * (j + 1) * np.log10(10 * (j + 1))
                                     # ------------------------arrays that will host counts per seed and sigma per seed
                                     on_counts = np.zeros(shape=len(seeds))
                                     off_counts = np.zeros(shape=len(seeds))
@@ -136,7 +136,7 @@ for runid in runids:
 
 
 
-                                            # ---------------selection of e_min and e_max according  to the irf value
+
 
                                             x = np.empty(shape=(n + 1))
                                             y = np.empty(shape=(n + 1))
@@ -223,21 +223,26 @@ for runid in runids:
 
                                                     r -= np.log10(10) / (12 * (m + 1))
 
-                                        print(f'\t\nCounts in time step {j + 1}:{on_reg_counts},{off_reg_counts}')
-                                        print('\n')
+                                        #print(f'\t\nCounts in time step {j + 1}:{on_reg_counts},{off_reg_counts}')
+                                        #print('\n')
                                         a = 1 / n
 
                                         on_counts[k] = previous_on + on_reg_counts
                                         off_counts[k] = previous_off + off_reg_counts
-                                        try:
-                                            sigma[k] = 2 * (on_counts[k] * np.log(((1 + a) / a) * (on_counts[k] / (off_counts[k] + on_counts[k]))) + off_counts[k] * np.log((1 + a) * (off_counts[k] / (off_counts[k] + on_counts[k]))))
 
-                                        except ValueError:
-                                            continue
+                                        # ----------trying to avoid nan's
+                                        if on_counts[k]==0 or off_counts[k]==0:
+                                            sigma[k]=0.0
+                                        else:
+                                            try:
+                                                sigma[k] = 2 * (on_counts[k] * np.log(((1 + a) / a) * (on_counts[k] / (off_counts[k] + on_counts[k]))) + off_counts[k] * np.log((1 + a) * (off_counts[k] / (off_counts[k] + on_counts[k]))))
 
-                                        if sigma[k] < 0:
-                                            sigma[k] = 0
-                                        sigma[k] = np.sqrt(sigma[k])
+                                            except ValueError:
+                                                continue
+
+                                            if sigma[k] < 0:
+                                                sigma[k] = 0
+                                            sigma[k] = np.sqrt(sigma[k])
 
                                         # counting number of times sigma is greater than threshold. The goal is to check if this is true 90% of times
                                         if sigma[k]>= 3:
@@ -273,6 +278,7 @@ for runid in runids:
                                     print(f'\tResponse function:{name_irf}, Energy: {sim_e_min} - {sim_e_max}')
                                     print(f'\tTime from trigger: {t_slice_stop}, significance: {mean_sigma}')
                                     print(f'\tOn region counts: {previous_on}, Off region counts: {previous_off}')
+                                    print (f'\tTimes sigma is above 3: {det3}, times sigma is above 5: {det5}')
                                     print('\n')
 # -----------------------------------------------------------------------------------------------------------------
                                     results[event][site][night]['irf'].append(name_irf)
