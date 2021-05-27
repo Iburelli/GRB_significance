@@ -72,7 +72,7 @@ for runid in runids:
                             print(f'\nProcessing {night}')
                             results[event][site][night]={'irf':[],'t_start':[],  't_stop':[], 'significance':[], 'variance':[]}
                             # ----------------------------------Checking visibility at the site during a specific night
-                            if type(data[event][site][night]['irfs']['zref']) == float:
+                            if data[event][site][night]['irfs']['zref'][0] == -9.0:
                                 print(f'\tThis contains NaNs event---> the source is not observable at the site.')
 
                                 results[event][site][night]['irf'] = -9.0
