@@ -32,6 +32,4 @@ After adjusting the configuration file to your needs, you can run the code as fo
 ```bash
 python TOW_evth_works.py -f cfg/config.yaml
 ```
-N.B. Some functions are imported from the file TOW_functions.py. Make sure they are in the same directory when compiling.
-
 
