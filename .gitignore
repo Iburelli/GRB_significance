@@ -17,5 +17,5 @@ plot.py
 *.png
 
 #Notebooks
-notebooks/.ipynb_checkpoints
+notebooks/.ipynb_checkpoints/
 
