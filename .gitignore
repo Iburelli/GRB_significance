@@ -9,7 +9,7 @@ txtfiles/
 *.fits
 *.xml
 *.reg
-*.npy
+
 energy_test_branch.py
 cfg/my_config.yaml
 plot.py
@@ -17,5 +17,5 @@ plot.py
 *.png
 
 #Notebooks
-notebooks/.ipynb_checkpoints/
+.ipynb_checkpoints
 
