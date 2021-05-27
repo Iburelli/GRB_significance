@@ -4,6 +4,7 @@ __pycache__/
 
 # Local 
 txtfiles/
+
 *.txt
 *.fits
 *.xml
@@ -11,6 +12,9 @@ txtfiles/
 *.npy
 energy_test_branch.py
 cfg/my_config.yaml
-notebooks/examples/plot.py
-notebooks/examples/*hidden.npy
-notebooks/examples/*.png
+plot.py
+*hidden.npy
+*.png
+
+#Notebooks
+.ipynb_checkpoints
