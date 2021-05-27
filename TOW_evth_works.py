@@ -7,7 +7,7 @@ from astropy.io import fits
 import argparse
 import yaml
 import numpy as np
-from TOW_functions import irf_selection, read_input_file
+from lib.TOW_functions import irf_selection, read_input_file
 
 parser = argparse.ArgumentParser(description='The significance of a GRB observation is computed at different IRFs according to a visibility table, created with runCatVisibility.py. A configuration YAML file is required, the output is saved as NPY binary file.')
 parser.add_argument('-f', '--config', required=True, type=str, help='configuration yaml file')
@@ -97,7 +97,7 @@ for runid in runids:
                                 previous_on = 0.0
                                 previous_off = 0.0
 
-                                for j in range(50):
+                                for j in range(60):
                                     t_slice_stop = t_slice_start + 10 * (j + 1) * np.log10(10 * (j + 1))
                                     # ------------------------arrays that will host counts per seed and sigma per seed
                                     on_counts = np.zeros(shape=len(seeds))
