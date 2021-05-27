@@ -17,9 +17,9 @@ Under cfg you can find a sample configuration file. Description of each paramete
 
 ## Models
 
-XML models for GRB afterglows are obtained with ctools_pipe (https://github.com/thomasgas/ctools_pipe) where the position of the source has been set in (ra,dec)=(0, 0.75) in order to be consistent with the 'region selection' step. 
+XML models for GRB afterglows can be obtained with ctools_pipe (https://github.com/thomasgas/ctools_pipe). The position of the source has to be set at (ra,dec)=(0, 0.75), in order to be consistent with the 'region selection' step. 
+To produce xml files you are supposed to have, at your disposal fits files of the events. These are needed to extract trigger time for single events. 
 
-Fits models of the afterglows are also needed to extract TRIGGER time. Files not uploaded here. 
 
 ## Visibility tables
 

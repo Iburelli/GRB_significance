@@ -28,6 +28,7 @@ for n, event in enumerate(events):
                 if type(data[event][site][night]['irf']) == float:
                     print(f'\tThis contains NaNs ---> the source is not observable at the site.')
                 else:
+                    print('\n')
                     print(f"\tStart time of single time intervals (here is printed just the first value): {data[event][site][night]['t_start'][0]}")
                     print(f"\tStop time of single time intervals (here is printed just the first value): {data[event][site][night]['t_stop'][0]}")
                     print(f"\tIrf associated to the interval: {data[event][site][night]['irf'][0]}")
