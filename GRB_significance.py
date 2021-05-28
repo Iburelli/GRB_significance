@@ -63,12 +63,13 @@ for runid in runids:
             # ----------------------------------------------------Running on SITES
 
             for site in sites:
-                if site == 'South':
+                #if site == 'North':
                     print(f'\nProcessing site {site}')
                     results[event][site]={}
+                    previous_on = 0.0
+                    previous_off = 0.0
                     # ----------------------------------------------------Running on NIGHTS
                     for night in data[event][site]:
-
                             print(f'\nProcessing {night}')
                             results[event][site][night]={'irf':[],'t_start':[],  't_stop':[], 'significance':[], 'variance':[], 'on_counts': [], 'off_counts':[]}
                             # ----------------------------------Checking visibility at the site during a specific night
@@ -87,18 +88,19 @@ for runid in runids:
                             # --------------------------------------------Simulation and analysis of VISIBLE sources
                             else:
                                 # ---------------time at which the GRB starts to be visible
-                                t_obs_start = data[event][site][night]['irfs']['start'][0]
+                                t_obs_start = data[event][site]['night01']['irfs']['start'][0]
                                 t_obs_start = (t_obs_start - trigger) * 86400
+                                t_night_start =data[event][site][night]['irfs']['start'][0]
+                                t_night_start = (t_night_start - trigger) * 86400
                                 # ---------------time at which the GRB stops to be observable
                                 t_obs_stop = data[event][site][night]['irfs']['stop'][-1]
                                 t_obs_stop = (t_obs_stop - trigger) * 86400
 
                                 # -----------------------start and stop time of the small time slices
-                                t_slice_start = t_obs_start + pointing_delay
+                                t_slice_start = t_night_start + pointing_delay
 
                                 # -----------------------variables that keep memory of counts in previous time slices
-                                previous_on = 0.0
-                                previous_off = 0.0
+
 
                                 for j in range(60):
                                     t_slice_stop = t_slice_start + 10 * (j + 1) * np.log10(10 * (j + 1))
@@ -162,7 +164,7 @@ for runid in runids:
                                             sim.execute()
                                             # --------------------------------------------------------------------------------------------
                                             print('\n')
-                                            print(f'\n\tTime interval: {t_slice_start - t_obs_start}, {t_slice_stop - t_obs_start}')
+                                            print(f'\n\tTime interval: {t_slice_start - t_night_start}, {t_slice_stop - t_night_start}')
                                             print(f'\tResponse function: {name_irf}')
                                             # ---------------------------------------------------------------------------------------------
                                             #clear the number of counts per region after each time step
@@ -273,7 +275,7 @@ for runid in runids:
                                             break
 # -----------------------------------------------------------------------------------------------------------------
                                     print(f'\n\t{event} - site {site} - {night}')
-                                    print(f'\tInterval {j + 1}, sim start time: {t_slice_start - t_obs_start}, sim_t_stop: {t_slice_stop - t_obs_start}')
+                                    print(f'\tInterval {j + 1}, sim start time: {t_slice_start - t_night_start}, sim_t_stop: {t_slice_stop - t_night_start}')
                                     print(f'\tResponse function:{name_irf}, Energy: {sim_e_min} - {sim_e_max}')
                                     print(f'\tTime from trigger: {t_slice_stop}, significance: {mean_sigma}')
                                     print(f'\tOn region counts: {previous_on}, Off region counts: {previous_off}')
