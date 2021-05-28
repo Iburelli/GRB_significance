@@ -7,7 +7,7 @@ from astropy.io import fits
 import argparse
 import yaml
 import numpy as np
-from lib.TOW_functions import irf_selection, read_input_file, append_new_line
+from lib.TOW_functions import irf_selection, read_input_file
 
 parser = argparse.ArgumentParser(description='The significance of a GRB observation is computed at different IRFs according to a visibility table, created with runCatVisibility.py. A configuration YAML file is required, the output is saved as NPY binary file.')
 parser.add_argument('-f', '--config', required=True, type=str, help='configuration yaml file')
@@ -68,7 +68,7 @@ for runid in runids:
                     results[event][site]={}
                     # ----------------------------------------------------Running on NIGHTS
                     for night in data[event][site]:
-                        
+
                             print(f'\nProcessing {night}')
                             results[event][site][night]={'irf':[],'t_start':[],  't_stop':[], 'significance':[], 'variance':[], 'on_counts': [], 'off_counts':[]}
                             # ----------------------------------Checking visibility at the site during a specific night
@@ -287,9 +287,6 @@ for runid in runids:
                                     results[event][site][night]['variance'].append(var)
                                     results[event][site][night]['on_counts'].append(previous_on)
                                     results[event][site][night]['off_counts'].append(previous_off)
-#------------------------------------------------------------------------------------Save on txt file
-                                    details = (f"{event}, {site}, {night},{t_slice_stop-t_obs_start}, {mean_sigma},{var}, {previous_on}, {previous_off}")
-                                    append_new_line(f'txtfiles/Significance_{event}.txt', details)
 
 # -----------------------------------------------------------------------------------------------------------------
                                     t_slice_start = t_slice_stop

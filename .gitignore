@@ -16,6 +16,9 @@ plot.py
 *hidden.npy
 *.png
 
+TOW_evth_works.py
+TOW_reads_tables.py
+TOW_sums_counts.py
 #Notebooks
 notebooks/.ipynb_checkpoints
 notebooks/TOW_plots.ipynb

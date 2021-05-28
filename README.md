@@ -30,6 +30,6 @@ Visibility tables must be given as an input. These tables are generated with run
 After adjusting the configuration file to your needs, you can run the code as follows:
 
 ```bash
-python TOW_evth_works.py -f cfg/config.yaml
+python GRB_significance.py -f cfg/config.yaml
 ```
 
