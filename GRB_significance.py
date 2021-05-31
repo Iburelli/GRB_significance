@@ -88,16 +88,16 @@ for runid in runids:
                             # --------------------------------------------Simulation and analysis of VISIBLE sources
                             else:
                                 # ---------------time at which the GRB starts to be visible
-                                t_obs_start = data[event][site]['night01']['irfs']['start'][0]
-                                t_obs_start = (t_obs_start - trigger) * 86400
-                                t_night_start =data[event][site][night]['irfs']['start'][0]
-                                t_night_start = (t_night_start - trigger) * 86400
-                                # ---------------time at which the GRB stops to be observable
-                                t_obs_stop = data[event][site][night]['irfs']['stop'][-1]
-                                t_obs_stop = (t_obs_stop - trigger) * 86400
+                                t_obs_start= data[event][site][night]['irfs']['start'][0]
+                                t_obs_start=(t_obs_start - trigger)*86400
+                                if 'first_night_start' not in results[event][site].keys():
+                                    results[event][site]['first_night_start']=t_obs_start
 
-                                # -----------------------start and stop time of the small time slices
-                                t_slice_start = t_night_start + pointing_delay
+                                t_obs_stop = data[event][site][night]['irfs']['stop'][-1]
+                                t_obs_stop = (t_obs_stop - trigger)*86400
+
+                                t_slice_start =  t_obs_start + pointing_delay
+
 
                                 # -----------------------variables that keep memory of counts in previous time slices
 
@@ -134,8 +134,8 @@ for runid in runids:
                                                 t_slice_stop = irf_t_max
 
                                             # ----------------------------------------time selection for IRF
-                                            delta_t_irf = t_slice_stop - t_obs_start
-
+                                            delta_t_irf = t_slice_stop - results[event][site]['first_night_start']
+                                            
                                             name_irf = irf_selection(site, zenith_angle, delta_t_irf)[0]
                                             sim_e_min = irf_selection(site, zenith_angle, delta_t_irf)[1]
 
