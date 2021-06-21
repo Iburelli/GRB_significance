@@ -8,7 +8,7 @@ import argparse
 import yaml
 import numpy as np
 from lib.TOW_functions import irf_selection, read_input_file
-
+#@nb.jit
 parser = argparse.ArgumentParser(description='The significance of a GRB observation is computed at different IRFs according to a visibility table, created with runCatVisibility.py. A configuration YAML file is required, the output is saved as NPY binary file.')
 parser.add_argument('-f', '--config', required=True, type=str, help='configuration yaml file')
 # configuration file
@@ -29,7 +29,7 @@ pointing_delay = cfg['ctools']['pointing_delay']
 n = cfg['ctools']['off_regions']
 
 # ------------------------------------------------------------------------generating random seeds
-seeds = [843]#np.random.randint(1, 1000, size=cfg['ctools']['iterations'])  # [849,313,923]
+seeds = np.random.randint(1, 1000, size=cfg['ctools']['iterations'])  # [849,313,923]
 # -------------------------------------------------------------------defining some useful paths
 catalog = read_input_file(xml_files_location, xml_filename, vis_cat_location)[0]  # location of xml files directories
 visibility_table = read_input_file(xml_files_location, xml_filename, vis_cat_location)[1]  # location of visibility table
@@ -135,7 +135,7 @@ for runid in runids:
 
                                             # ----------------------------------------time selection for IRF
                                             delta_t_irf = t_slice_stop - results[event][site]['first_night_start']
-                                            
+
                                             name_irf = irf_selection(site, zenith_angle, delta_t_irf)[0]
                                             sim_e_min = irf_selection(site, zenith_angle, delta_t_irf)[1]
 
