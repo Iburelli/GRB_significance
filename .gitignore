@@ -19,4 +19,4 @@ plot.py
 TOW/
 #Notebooks
 notebooks/.ipynb_checkpoints
-notebooks/TOW_plots.ipynb
+notebooks/TOW*.ipynb
