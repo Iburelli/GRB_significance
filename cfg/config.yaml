@@ -12,7 +12,12 @@ path:
   xml_dir:  path/to/xml_models/folder
   #output where significance table will be saved
   sigmaoutput: path/to/significance/output.npy
+
+# site you want to analyse, leave blank if both
+site: North
+
 #parameters to use for simulation with ctools
+
 ctools:
    #maximum value of energy up to wich simualte (TeV)
    emax : 10.0
