@@ -38,7 +38,10 @@ runids = read_input_file(xml_files_location, xml_filename, vis_cat_location)[2]
 # --------------------------------------------------------------reading visibility table
 data = np.load(visibility_table, allow_pickle=True, encoding='latin1', fix_imports=True).flat[0]
 events = list(data.keys())
-sites = list(data[events[0]].keys())
+if cfg['site']==None:
+    sites = list(data[events[0]].keys())
+else:
+    sites=np.array([cfg['site']])
 # -------------------------------------------------select input xml model
 results = {}
 for runid in runids:
