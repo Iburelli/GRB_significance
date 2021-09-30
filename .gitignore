@@ -22,4 +22,4 @@ notebooks/.ipynb_checkpoints
 notebooks/TOW*.ipynb
 #notebooks/TOW_plots.ipynb
 notebooks/*.csv
-
+notebooks/config
