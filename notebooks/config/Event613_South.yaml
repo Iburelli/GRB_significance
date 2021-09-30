@@ -1,0 +1,22 @@
+path:
+  filename: 
+  catalog: input/afterglow
+  output: tables/LONG_FITS.noMoon.thresh24.NEW.npy
+  xml_filename: model_Event613.xml
+  xml_dir: models/subset7/Event613
+  sigmaoutput: output/Event613.South.NoMoon.thresh24.npy
+save_log: False
+site: South
+random_seed: True
+iterations: 100
+seed: 
+ctools: 
+  t_stop: 
+  emax : 10.0
+  caldb: prod3b-v2
+  offset: 0.75
+  off_regions: 5
+  pointing_delay: 107.
+  3sigma_stop: no
+  5sigma_stop: no
+verbosity: 0

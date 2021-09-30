@@ -7,32 +7,44 @@ path:
   # output where visibility table will be saved (used also as input for signigficance calculation)
   output: path/to/visibility/output.npy
   # input XML model --> null if you want to run an entire catalog
-  xml_filename: model_Event*.xml
+  xml_filename: #model_Event*.xml
   # folder where input XML models are stored (the program looks for xml files even in subdirectories) 
   xml_dir:  path/to/xml_models/folder
   #output where significance table will be saved
   sigmaoutput: path/to/significance/output.npy
 
 # site you want to analyse, leave blank if both
-site: North
+site: 
 
+# seeds and iterations
+random_seed: True   #Set True if you want the seed(s) to be chosen randomly
+#number of times the simulation will be iterated. Can be set to 1 if you want 1 simulation with a random seed
+iterations: 1
+# If iterate is set to false you can choose a fixed seed value
+seed: 
+
+
+#Set True if you want the seed(s) to be chosen randomly
+random_seed: True 
+#number of times the simulation will be iterated. Can be set to 1 if you want 1 simulation with a random seed
+iterations: 100
+# If iterate is set to false you can choose a fixed seed value
+seed: 
+# stop simulation after 1h if sigma is still lower than 3
+speed_up: True
 #parameters to use for simulation with ctools
-
 ctools:
+   t_stop: #real number. Not null if you want to interrupt simualtion before end of simulation
    #maximum value of energy up to wich simualte (TeV)
    emax : 10.0
-   #simulation radius
-   rad: 5.0
    #calibration database       
    caldb: prod3b-v2
-   #number of times the simulation will be iterated
-   iterations: 1
    #offset of on and off regions from the pointing center
    offset: 0.75
    #number of off regions
    off_regions: 5
    #repointing time delay   
-   pointing_delay: 30. 
+   pointing_delay: 107.
    #stop iterating at N sigma?
    3sigma_stop: no
    5sigma_stop: no
