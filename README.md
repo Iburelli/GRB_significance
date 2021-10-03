@@ -32,4 +32,7 @@ After adjusting the configuration file to your needs, you can run the code as fo
 ```bash
 python GRB_significance.py -f cfg/config.yaml
 ```
+## Test branch
+Should not work properly, it's a test branch...
+I cannot guarantee it runs properly nor it runs at all
 
