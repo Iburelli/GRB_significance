@@ -7,7 +7,7 @@ from astropy.io import fits
 import argparse
 import yaml
 import numpy as np
-from lib.functions import irf_selection, read_input_file , append_new_line
+from lib.TOW_functions import irf_selection, read_input_file , append_new_line
 
 parser = argparse.ArgumentParser(description='The significance of a GRB observation is computed at different IRFs according to a visibility table, created with runCatVisibility.py. A configuration YAML file is required, the output is saved as NPY binary file.')
 parser.add_argument('-f', '--config', required=True, type=str, help='configuration yaml file')
@@ -34,6 +34,9 @@ sim_rad  = offset + max(reg_rad) + 0.01
 #-------------------------------------------------------------------------------
 template_sigma='/home/irene/provepy/template_sigma.npy'
 ref_sigma = np.load(template_sigma, allow_pickle=True, encoding='latin1', fix_imports=True).flat[0]
+
+# ------------------------------------------------------------------------generating random seeds
+
 
 # -------------------------------------------------------------------defining some useful paths
 catalog = read_input_file(xml_files_location, xml_filename, vis_cat_location)[0]  # location of xml files directories
@@ -156,10 +159,10 @@ for runid in runids:
                                                 break
                                         else:
                                             if results[event][site]['night01']['significance'] == -9.0 :
-                                                if delta_obs > 14400 and '3sigma' not in results[event][site][night].keys() :
+                                                if delta_obs > 3600 and '3sigma' not in results[event][site][night].keys() :
                                                     break
-                                            #if '3sigma' not in results[event][site]['night01'].keys() and type(results[event][site]['night01']['significance'])!=float:
-                                            #    break
+                                            if '3sigma' not in results[event][site]['night01'].keys() and type(results[event][site]['night01']['significance'])!=-9.0:
+                                               break
 
                                     on_counts=np.zeros(shape=len(seeds))
                                     off_counts=np.zeros(shape=len(seeds))
@@ -339,7 +342,7 @@ for runid in runids:
                                     mean_sigma=round(mean_sigma, 2)
                                     var=round(var, 2)
 
-                                    detection_threshold = 90*cfg['iterations']/100
+                                    detection_threshold = 90*len(seeds)/100
 # -----------------------------------------------------------------------------------------------3 sigma detection
                                     if det3 >=detection_threshold and '3sigma' not in results[event][site][night].keys():
                                         results[event][site][night]['3sigma'] = [t_slice_stop,mean_sigma]
@@ -351,7 +354,7 @@ for runid in runids:
                                         results[event][site][night]['5sigma'] = [t_slice_stop,mean_sigma]
                                         if cfg['ctools']['5sigma_stop'] == True:
                                             break
-
+                                    #print(night, results[event][site][night])
 
                                     details = (f"{event},{site},{night},{t_slice_stop},{mean_sigma},{var},{previous_on},{previous_off}")
                                     append_new_line(f'txtfiles/Significance_{event}.txt', details)
