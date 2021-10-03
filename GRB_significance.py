@@ -155,11 +155,11 @@ for runid in runids:
                                     # ------ simulation stop if source is not at 3sigma in 1h
                                     if cfg['speed_up']== True:
                                         if night == 'night01':
-                                            if delta_obs > 3600 and '3sigma' not in results[event][site][night].keys() :
+                                            if delta_obs > 14400 and '3sigma' not in results[event][site][night].keys() :
                                                 break
                                         else:
                                             if results[event][site]['night01']['significance'] == -9.0 :
-                                                if delta_obs > 3600 and '3sigma' not in results[event][site][night].keys() :
+                                                if delta_obs > 14400 and '3sigma' not in results[event][site][night].keys() :
                                                     break
                                             if '3sigma' not in results[event][site]['night01'].keys() and type(results[event][site]['night01']['significance'])!=-9.0:
                                                break
