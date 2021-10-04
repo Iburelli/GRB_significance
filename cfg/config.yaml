@@ -3,15 +3,15 @@ path:
   # template (or list of templates) --> null if you want to run an entire catalog
   filename: 
   # folder where templates are stored 
-  catalog: /home/irene/cta/input/afterglow
+  catalog: input/afterglow
   # output where visibility table will be saved (used also as input for signigficance calculation)
-  output: /home/irene/provepy/VisCat/LONG_FITS.noMoon.thresh24.NEW.npy
+  output: tables/LONG_FITS.noMoon.thresh24.NEW.npy
   # input XML model --> null if you want to run an entire catalog
   xml_filename: #model_Event100.xml
     # folder where input XML models are stored (the program looks for xml files even in subdirectories)
-  xml_dir: /home/irene/cta/models/subset2
+  xml_dir: models/subset2
     #output where significance table will be saved
-  sigmaoutput: /home/irene/github/GRB_significance/notebooks/examples/Events_101_200.North.iterations.noMoon.thresh24.hidden.npy
+  sigmaoutput: output/Events_101_200.North.iterations.noMoon.thresh24.hidden.npy
 
 save_log: False
 # leave empty if both sites must to be analysed
