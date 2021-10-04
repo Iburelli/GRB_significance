@@ -3,14 +3,14 @@
 __pycache__/
 
 # Local 
-txtfiles/
+#txtfiles/
 
-*.txt
-*.fits
-*.xml
-*.reg
+#*.txt
+#*.fits
+#*.xml
+#*.reg
 
-energy_test_branch.py
+#energy_test_branch.py
 cfg/my_config.yaml
 plot.py
 *hidden.npy
