@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<source_library title="source library">
+  <source name="Background" type="CTAIrfBackground" instrument="CTA">
+    <spectrum type="PowerLaw">
+      <parameter scale="1e+00" name="Prefactor" min="1e-7" max="1000" free="1" value="1.00000" />
+      <parameter scale="-1.0" name="Index" min="0.0" max="+10.0" free="1" value="0.0" />
+      <parameter scale="1.0" name="Scale" min="0.0" max="+10000000.0" free="0" value="300000.0" />
+    </spectrum>
+  </source>
+  <source type="PointSource" name="Event77_0" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_000_tin-1.260_tend-1.580.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_000_tin-1.260_tend-1.580.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_1" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_001_tin-1.580_tend-1.980.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_001_tin-1.580_tend-1.980.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_2" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_002_tin-1.980_tend-2.470.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_002_tin-1.980_tend-2.470.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_3" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_003_tin-2.470_tend-3.090.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_003_tin-2.470_tend-3.090.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_4" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_004_tin-3.090_tend-3.860.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_004_tin-3.090_tend-3.860.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_5" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_005_tin-3.860_tend-5.480.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_005_tin-3.860_tend-5.480.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_6" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_006_tin-5.480_tend-7.160.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_006_tin-5.480_tend-7.160.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_7" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_007_tin-7.160_tend-9.740.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_007_tin-7.160_tend-9.740.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_8" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_008_tin-9.740_tend-12.300.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_008_tin-9.740_tend-12.300.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_9" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_009_tin-12.300_tend-15.900.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_009_tin-12.300_tend-15.900.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_10" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_010_tin-15.900_tend-20.300.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_010_tin-15.900_tend-20.300.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_11" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_011_tin-20.300_tend-25.600.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_011_tin-20.300_tend-25.600.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_12" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_012_tin-25.600_tend-32.700.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_012_tin-25.600_tend-32.700.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_13" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_013_tin-32.700_tend-41.700.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_013_tin-32.700_tend-41.700.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_14" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_014_tin-41.700_tend-52.500.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_014_tin-41.700_tend-52.500.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_15" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_015_tin-52.500_tend-66.600.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_015_tin-52.500_tend-66.600.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_16" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_016_tin-66.600_tend-84.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_016_tin-66.600_tend-84.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_17" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_017_tin-84.000_tend-106.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_017_tin-84.000_tend-106.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_18" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_018_tin-106.000_tend-135.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_018_tin-106.000_tend-135.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_19" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_019_tin-135.000_tend-173.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_019_tin-135.000_tend-173.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_20" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_020_tin-173.000_tend-221.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_020_tin-173.000_tend-221.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_21" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_021_tin-221.000_tend-285.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_021_tin-221.000_tend-285.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_22" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_022_tin-285.000_tend-363.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_022_tin-285.000_tend-363.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_23" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_023_tin-363.000_tend-455.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_023_tin-363.000_tend-455.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_24" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_024_tin-455.000_tend-580.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_024_tin-455.000_tend-580.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_25" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_025_tin-580.000_tend-753.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_025_tin-580.000_tend-753.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_26" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_026_tin-753.000_tend-996.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_026_tin-753.000_tend-996.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_27" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_027_tin-996.000_tend-1260.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_027_tin-996.000_tend-1260.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_28" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_028_tin-1260.000_tend-1620.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_028_tin-1260.000_tend-1620.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_29" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_029_tin-1620.000_tend-2100.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_029_tin-1620.000_tend-2100.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_30" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_030_tin-2100.000_tend-2760.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_030_tin-2100.000_tend-2760.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_31" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_031_tin-2760.000_tend-3660.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_031_tin-2760.000_tend-3660.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_32" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_032_tin-3660.000_tend-4920.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_032_tin-3660.000_tend-4920.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_33" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_033_tin-4920.000_tend-6200.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_033_tin-4920.000_tend-6200.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_34" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_034_tin-6200.000_tend-7860.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_034_tin-6200.000_tend-7860.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_35" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_035_tin-7860.000_tend-10100.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_035_tin-7860.000_tend-10100.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_36" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_036_tin-10100.000_tend-13000.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_036_tin-10100.000_tend-13000.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_37" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_037_tin-13000.000_tend-16800.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_037_tin-13000.000_tend-16800.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_38" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_038_tin-16800.000_tend-22100.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_038_tin-16800.000_tend-22100.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_39" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_039_tin-22100.000_tend-29200.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_039_tin-22100.000_tend-29200.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_40" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_040_tin-29200.000_tend-39100.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_040_tin-29200.000_tend-39100.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_41" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_041_tin-39100.000_tend-52800.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_041_tin-39100.000_tend-52800.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_42" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_042_tin-52800.000_tend-72300.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_042_tin-52800.000_tend-72300.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_43" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_043_tin-72300.000_tend-100000.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_043_tin-72300.000_tend-100000.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_44" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_044_tin-100000.000_tend-125000.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_044_tin-100000.000_tend-125000.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+  <source type="PointSource" name="Event77_45" tscalc="1">
+    <spectrum type="FileFunction" file="/home/irene/cta/models/afterglow/Event77/spectra/spec_045_tin-125000.000_tend-158000.000.txt">
+      <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
+      <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
+    </spatialModel>
+    <temporal type="LightCurve" file="/home/irene/cta/models/afterglow/Event77/lightcv/lc_045_tin-125000.000_tend-158000.000.fits">
+      <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
+    </temporal>
+  </source>
+</source_library>
