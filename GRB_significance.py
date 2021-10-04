@@ -32,7 +32,7 @@ en_steps = [0.03,0.04,0.562,0.110,0.1778,0.3162,0.5623,1.0,1.7883,3.1623,5.6234,
 reg_rad  = [0.35,0.29,0.21,0.16,0.14,0.12,0.095,0.075,0.068,0.061,0.055, 0.05]
 sim_rad  = offset + max(reg_rad) + 0.01
 #-------------------------------------------------------------------------------
-template_sigma='/home/irene/provepy/template_sigma.npy'
+template_sigma='template_sigma.npy'
 ref_sigma = np.load(template_sigma, allow_pickle=True, encoding='latin1', fix_imports=True).flat[0]
 
 # ------------------------------------------------------------------------generating random seeds
