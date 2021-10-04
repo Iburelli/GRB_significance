@@ -8,626 +8,626 @@
     </spectrum>
   </source>
   <source type="PointSource" name="Event102_0" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_000_tin-1.080_tend-1.360.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_000_tin-1.080_tend-1.360.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_000_tin-1.080_tend-1.360.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_000_tin-1.080_tend-1.360.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_1" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_001_tin-1.360_tend-1.740.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_001_tin-1.360_tend-1.740.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_001_tin-1.360_tend-1.740.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_001_tin-1.360_tend-1.740.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_2" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_002_tin-1.740_tend-2.210.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_002_tin-1.740_tend-2.210.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_002_tin-1.740_tend-2.210.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_002_tin-1.740_tend-2.210.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_3" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_003_tin-2.210_tend-2.780.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_003_tin-2.210_tend-2.780.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_003_tin-2.210_tend-2.780.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_003_tin-2.210_tend-2.780.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_4" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_004_tin-2.780_tend-3.540.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_004_tin-2.780_tend-3.540.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_004_tin-2.780_tend-3.540.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_004_tin-2.780_tend-3.540.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_5" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_005_tin-3.540_tend-4.490.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_005_tin-3.540_tend-4.490.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_005_tin-3.540_tend-4.490.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_005_tin-3.540_tend-4.490.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_6" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_006_tin-4.490_tend-5.630.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_006_tin-4.490_tend-5.630.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_006_tin-4.490_tend-5.630.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_006_tin-4.490_tend-5.630.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_7" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_007_tin-5.630_tend-7.070.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_007_tin-5.630_tend-7.070.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_007_tin-5.630_tend-7.070.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_007_tin-5.630_tend-7.070.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_8" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_008_tin-7.070_tend-8.890.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_008_tin-7.070_tend-8.890.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_008_tin-7.070_tend-8.890.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_008_tin-7.070_tend-8.890.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_9" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_009_tin-8.890_tend-11.200.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_009_tin-8.890_tend-11.200.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_009_tin-8.890_tend-11.200.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_009_tin-8.890_tend-11.200.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_10" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_010_tin-11.200_tend-14.100.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_010_tin-11.200_tend-14.100.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_010_tin-11.200_tend-14.100.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_010_tin-11.200_tend-14.100.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_11" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_011_tin-14.100_tend-17.600.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_011_tin-14.100_tend-17.600.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_011_tin-14.100_tend-17.600.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_011_tin-14.100_tend-17.600.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_12" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_012_tin-17.600_tend-22.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_012_tin-17.600_tend-22.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_012_tin-17.600_tend-22.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_012_tin-17.600_tend-22.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_13" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_013_tin-22.000_tend-27.600.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_013_tin-22.000_tend-27.600.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_013_tin-22.000_tend-27.600.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_013_tin-22.000_tend-27.600.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_14" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_014_tin-27.600_tend-34.500.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_014_tin-27.600_tend-34.500.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_014_tin-27.600_tend-34.500.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_014_tin-27.600_tend-34.500.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_15" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_015_tin-34.500_tend-43.300.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_015_tin-34.500_tend-43.300.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_015_tin-34.500_tend-43.300.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_015_tin-34.500_tend-43.300.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_16" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_016_tin-43.300_tend-54.100.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_016_tin-43.300_tend-54.100.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_016_tin-43.300_tend-54.100.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_016_tin-43.300_tend-54.100.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_17" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_017_tin-54.100_tend-67.800.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_017_tin-54.100_tend-67.800.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_017_tin-54.100_tend-67.800.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_017_tin-54.100_tend-67.800.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_18" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_018_tin-67.800_tend-84.800.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_018_tin-67.800_tend-84.800.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_018_tin-67.800_tend-84.800.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_018_tin-67.800_tend-84.800.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_19" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_019_tin-84.800_tend-106.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_019_tin-84.800_tend-106.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_019_tin-84.800_tend-106.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_019_tin-84.800_tend-106.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_20" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_020_tin-106.000_tend-133.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_020_tin-106.000_tend-133.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_020_tin-106.000_tend-133.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_020_tin-106.000_tend-133.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_21" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_021_tin-133.000_tend-166.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_021_tin-133.000_tend-166.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_021_tin-133.000_tend-166.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_021_tin-133.000_tend-166.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_22" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_022_tin-166.000_tend-208.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_022_tin-166.000_tend-208.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_022_tin-166.000_tend-208.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_022_tin-166.000_tend-208.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_23" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_023_tin-208.000_tend-262.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_023_tin-208.000_tend-262.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_023_tin-208.000_tend-262.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_023_tin-208.000_tend-262.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_24" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_024_tin-262.000_tend-329.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_024_tin-262.000_tend-329.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_024_tin-262.000_tend-329.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_024_tin-262.000_tend-329.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_25" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_025_tin-329.000_tend-413.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_025_tin-329.000_tend-413.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_025_tin-329.000_tend-413.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_025_tin-329.000_tend-413.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_26" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_026_tin-413.000_tend-517.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_026_tin-413.000_tend-517.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_026_tin-413.000_tend-517.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_026_tin-413.000_tend-517.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_27" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_027_tin-517.000_tend-650.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_027_tin-517.000_tend-650.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_027_tin-517.000_tend-650.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_027_tin-517.000_tend-650.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_28" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_028_tin-650.000_tend-815.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_028_tin-650.000_tend-815.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_028_tin-650.000_tend-815.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_028_tin-650.000_tend-815.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_29" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_029_tin-815.000_tend-1020.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_029_tin-815.000_tend-1020.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_029_tin-815.000_tend-1020.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_029_tin-815.000_tend-1020.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_30" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_030_tin-1020.000_tend-1280.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_030_tin-1020.000_tend-1280.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_030_tin-1020.000_tend-1280.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_030_tin-1020.000_tend-1280.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_31" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_031_tin-1280.000_tend-1610.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_031_tin-1280.000_tend-1610.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_031_tin-1280.000_tend-1610.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_031_tin-1280.000_tend-1610.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_32" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_032_tin-1610.000_tend-2030.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_032_tin-1610.000_tend-2030.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_032_tin-1610.000_tend-2030.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_032_tin-1610.000_tend-2030.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_33" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_033_tin-2030.000_tend-2550.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_033_tin-2030.000_tend-2550.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_033_tin-2030.000_tend-2550.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_033_tin-2030.000_tend-2550.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_34" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_034_tin-2550.000_tend-3200.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_034_tin-2550.000_tend-3200.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_034_tin-2550.000_tend-3200.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_034_tin-2550.000_tend-3200.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_35" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_035_tin-3200.000_tend-4020.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_035_tin-3200.000_tend-4020.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_035_tin-3200.000_tend-4020.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_035_tin-3200.000_tend-4020.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_36" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_036_tin-4020.000_tend-5040.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_036_tin-4020.000_tend-5040.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_036_tin-4020.000_tend-5040.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_036_tin-4020.000_tend-5040.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_37" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_037_tin-5040.000_tend-6360.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_037_tin-5040.000_tend-6360.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_037_tin-5040.000_tend-6360.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_037_tin-5040.000_tend-6360.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_38" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_038_tin-6360.000_tend-8000.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_038_tin-6360.000_tend-8000.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_038_tin-6360.000_tend-8000.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_038_tin-6360.000_tend-8000.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_39" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_039_tin-8000.000_tend-10000.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_039_tin-8000.000_tend-10000.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_039_tin-8000.000_tend-10000.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_039_tin-8000.000_tend-10000.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_40" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_040_tin-10000.000_tend-12700.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_040_tin-10000.000_tend-12700.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_040_tin-10000.000_tend-12700.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_040_tin-10000.000_tend-12700.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_41" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_041_tin-12700.000_tend-15900.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_041_tin-12700.000_tend-15900.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_041_tin-12700.000_tend-15900.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_041_tin-12700.000_tend-15900.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_42" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_042_tin-15900.000_tend-19900.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_042_tin-15900.000_tend-19900.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_042_tin-15900.000_tend-19900.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_042_tin-15900.000_tend-19900.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_43" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_043_tin-19900.000_tend-25100.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_043_tin-19900.000_tend-25100.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_043_tin-19900.000_tend-25100.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_043_tin-19900.000_tend-25100.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_44" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_044_tin-25100.000_tend-31400.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_044_tin-25100.000_tend-31400.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_044_tin-25100.000_tend-31400.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_044_tin-25100.000_tend-31400.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_45" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_045_tin-31400.000_tend-39600.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_045_tin-31400.000_tend-39600.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_045_tin-31400.000_tend-39600.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_045_tin-31400.000_tend-39600.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_46" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_046_tin-39600.000_tend-49600.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_046_tin-39600.000_tend-49600.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_046_tin-39600.000_tend-49600.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_046_tin-39600.000_tend-49600.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_47" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_047_tin-49600.000_tend-62500.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_047_tin-49600.000_tend-62500.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_047_tin-49600.000_tend-62500.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_047_tin-49600.000_tend-62500.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_48" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_048_tin-62500.000_tend-78200.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_048_tin-62500.000_tend-78200.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_048_tin-62500.000_tend-78200.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_048_tin-62500.000_tend-78200.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_49" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_049_tin-78200.000_tend-98400.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_049_tin-78200.000_tend-98400.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_049_tin-78200.000_tend-98400.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_049_tin-78200.000_tend-98400.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_50" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_050_tin-98400.000_tend-125000.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_050_tin-98400.000_tend-125000.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_050_tin-98400.000_tend-125000.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_050_tin-98400.000_tend-125000.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
   <source type="PointSource" name="Event102_51" tscalc="1">
-    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/spectra/spec_051_tin-125000.000_tend-156000.000.txt">
+    <spectrum type="FileFunction" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/spectra/spec_051_tin-125000.000_tend-156000.000.txt">
       <parameter scale="1e+00" name="Normalization" min="1e-7" max="1000" free="1" value="1.00000" />
     </spectrum>
     <spatialModel type="SkyDirFunction">
       <parameter scale="1.0" name="RA" min="-360" max="360" free="0" value="0" />
       <parameter scale="1.0" name="DEC" min="-90" max="90" free="0" value="0.75" />
     </spatialModel>
-    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/afterglow/Event102/lightcv/lc_051_tin-125000.000_tend-156000.000.fits">
+    <temporal type="LightCurve" file="/home/CTA/iburelli/GRB_significance/models/subset2/Event102/lightcv/lc_051_tin-125000.000_tend-156000.000.fits">
       <parameter scale="1e+00" name="Normalization" min="0.0" max="1000.0" free="0" value="1.00000" />
     </temporal>
   </source>
