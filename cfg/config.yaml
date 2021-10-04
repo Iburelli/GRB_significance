@@ -3,20 +3,40 @@ path:
   # template (or list of templates) --> null if you want to run an entire catalog
   filename: 
   # folder where templates are stored 
-  catalog: /home/irene/cta/input/afterglow
+  catalog: input/afterglow
   # output where visibility table will be saved (used also as input for signigficance calculation)
-  output: /home/irene/provepy/VisCat/LONG_FITS.noMoon.thresh24.NEW.npy
+  output: tables/LONG_FITS.noMoon.thresh24.NEW.npy
   # input XML model --> null if you want to run an entire catalog
+<<<<<<< HEAD
+  xml_filename: #model_Event*.xml
+  # folder where input XML models are stored (the program looks for xml files even in subdirectories) 
+  xml_dir:  path/to/xml_models/folder
+  #output where significance table will be saved
+  sigmaoutput: path/to/significance/output.npy
+
+# site you want to analyse, leave blank if both
+site: 
+
+# seeds and iterations
+random_seed: True   #Set True if you want the seed(s) to be chosen randomly
+#number of times the simulation will be iterated. Can be set to 1 if you want 1 simulation with a random seed
+iterations: 1
+# If iterate is set to false you can choose a fixed seed value
+seed: 
+
+
+=======
   xml_filename: #model_Event100.xml
     # folder where input XML models are stored (the program looks for xml files even in subdirectories)
-  xml_dir: /home/irene/cta/models/subset2
+  xml_dir: models/subset2
     #output where significance table will be saved
-  sigmaoutput: /home/irene/github/GRB_significance/notebooks/examples/Events_101_200.North.iterations.noMoon.thresh24.hidden.npy
+  sigmaoutput: output/Events_101_200.North.iterations.noMoon.thresh24.hidden.npy
 
 save_log: False
 # leave empty if both sites must to be analysed
 site: North
 
+>>>>>>> 3f2e68899576ef76a1817453655d5cdb1cc02384
 #Set True if you want the seed(s) to be chosen randomly
 random_seed: True 
 #number of times the simulation will be iterated. Can be set to 1 if you want 1 simulation with a random seed
@@ -27,7 +47,11 @@ seed:
 speed_up: True
 #parameters to use for simulation with ctools
 ctools:
+<<<<<<< HEAD
+   t_stop: #real number. Not null if you want to interrupt simualtion before end of simulation
+=======
    t_stop: #87322.5
+>>>>>>> 3f2e68899576ef76a1817453655d5cdb1cc02384
    #maximum value of energy up to wich simualte (TeV)
    emax : 10.0
    #calibration database       

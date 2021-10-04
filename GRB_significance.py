@@ -7,7 +7,7 @@ from astropy.io import fits
 import argparse
 import yaml
 import numpy as np
-from lib.TOW_functions import irf_selection, read_input_file , append_new_line
+from lib.functions import irf_selection, read_input_file , append_new_line
 
 parser = argparse.ArgumentParser(description='The significance of a GRB observation is computed at different IRFs according to a visibility table, created with runCatVisibility.py. A configuration YAML file is required, the output is saved as NPY binary file.')
 parser.add_argument('-f', '--config', required=True, type=str, help='configuration yaml file')
@@ -36,7 +36,6 @@ template_sigma='/home/irene/provepy/template_sigma.npy'
 ref_sigma = np.load(template_sigma, allow_pickle=True, encoding='latin1', fix_imports=True).flat[0]
 
 # ------------------------------------------------------------------------generating random seeds
-
 
 # -------------------------------------------------------------------defining some useful paths
 catalog = read_input_file(xml_files_location, xml_filename, vis_cat_location)[0]  # location of xml files directories
@@ -94,14 +93,15 @@ for runid in runids:
                         pointing_delay = 0.0
 
     #----------------------------------------------------Running on NIGHTS
-                    if ref_sigma[event][site]<8.0:
+                    previous_on=0.0
+                    previous_off=0.0
+                    if ref_sigma[event][site] <= 8.0:
                         seeds = np.random.randint(1, 1000, size=cfg['iterations'])  # [849,313,923]
 
                     else:
+
                         seeds = np.random.randint(1, 1000, size=1)
 
-                    previous_on=0.0
-                    previous_off=0.0
 
                     for night in data[event][site]:
                             print(f'\nProcessing {night}')
@@ -155,21 +155,23 @@ for runid in runids:
                                     # ------ simulation stop if source is not at 3sigma in 1h
                                     if cfg['speed_up']== True:
                                         if night == 'night01':
-                                            if delta_obs > 3600 and '3sigma' not in results[event][site][night].keys() :
+                                            if delta_obs > 14400 and '5sigma' not in results[event][site][night].keys() :
                                                 break
                                         else:
                                             if results[event][site]['night01']['significance'] == -9.0 :
-                                                if delta_obs > 3600 and '3sigma' not in results[event][site][night].keys() :
+                                                if delta_obs > 14400 and '5sigma' not in results[event][site][night].keys() :
                                                     break
-                                            if '3sigma' not in results[event][site]['night01'].keys() and type(results[event][site]['night01']['significance'])!=-9.0:
-                                               break
+                                            if '5sigma' not in results[event][site]['night01'].keys() and type(results[event][site]['night01']['significance'])!=float:
+                                                break
 
-                                    on_counts=np.zeros(shape=len(seeds))
-                                    off_counts=np.zeros(shape=len(seeds))
-                                    sigma=np.zeros(shape=len(seeds))
-                                    det3=0
-                                    det5=0
 
+
+
+                                    on_counts = np.zeros(shape=len(seeds))
+                                    off_counts = np.zeros(shape=len(seeds))
+                                    sigma = np.zeros(shape=len(seeds))
+                                    det3 = 0
+                                    det5 = 0
 
                                     for k, seed in enumerate(seeds):
 
@@ -325,7 +327,7 @@ for runid in runids:
 
                                             if cfg['iterations']>1:
                                                 tosave = (f"{event},{site},{night},{seed},{t_slice_start},{t_slice_stop},{sigma[k]},{on_counts[k]},{off_counts[k]}")
-                                                append_new_line(f'txtfiles/Intermediate_{event}.txt', tosave)
+                                                append_new_line(f'TOW/txtfiles/Intermediate_{event}.txt', tosave)
                                         # counting number of times sigma is greater than threshold. The goal is to check if this is true 90% of times
                                         if sigma[k]>= 3:
                                             det3+=1
@@ -342,7 +344,7 @@ for runid in runids:
                                     mean_sigma=round(mean_sigma, 2)
                                     var=round(var, 2)
 
-                                    detection_threshold = 90*len(seeds)/100
+                                    detection_threshold = 90*cfg['iterations']/100
 # -----------------------------------------------------------------------------------------------3 sigma detection
                                     if det3 >=detection_threshold and '3sigma' not in results[event][site][night].keys():
                                         results[event][site][night]['3sigma'] = [t_slice_stop,mean_sigma]
@@ -354,10 +356,9 @@ for runid in runids:
                                         results[event][site][night]['5sigma'] = [t_slice_stop,mean_sigma]
                                         if cfg['ctools']['5sigma_stop'] == True:
                                             break
-                                    #print(night, results[event][site][night])
 
                                     details = (f"{event},{site},{night},{t_slice_stop},{mean_sigma},{var},{previous_on},{previous_off}")
-                                    append_new_line(f'txtfiles/Significance_{event}.txt', details)
+                                    append_new_line(f'TOW/txtfiles/Significance_{event}.txt', details)
 
                                     results[event][site][night]['irf'].append(name_irf)
                                     results[event][site][night]['t_start'].append(t_slice_start)
