@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from os.path import join
 import ctools
 import astropy.units as u
@@ -336,12 +337,12 @@ for runid in runids:
                                         if sigma[k]>= 5:
                                             det5+=1
 
-                                    previous_on= np.mean(on_counts)
-                                    previous_off=np.mean(off_counts)
+                                    previous_on= np.median(on_counts)
+                                    previous_off=np.median(off_counts)
 
                                     var_on=np.std(on_counts)
                                     var_off=np.std(off_counts)
-                                    mean_sigma = np.mean(sigma)
+                                    mean_sigma = np.median(sigma)
                                     var = np.std(sigma)
                                     mean_sigma=round(mean_sigma, 2)
                                     var=round(var, 2)
