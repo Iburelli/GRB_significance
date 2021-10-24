@@ -3,15 +3,15 @@ path:
   # template (or list of templates) --> null if you want to run an entire catalog
   filename: 
   # folder where templates are stored 
-  catalog: /home/irene/cta/input/afterglow
+  catalog: /path/to/fits_files/dir
   # output where visibility table will be saved (used also as input for signigficance calculation)
-  output: /home/irene/provepy/VisCat/LONG_FITS.noMoon.thresh24.NEW.npy
+  output: /path/to/visibility_tables.npy
   # input XML model --> null if you want to run an entire catalog
-  xml_filename: model_Event84.xml
+  xml_filename: 
     # folder where input XML models are stored (the program looks for xml files even in subdirectories)
-  xml_dir: /home/irene/cta/models/subset1/Event84
+  xml_dir: path/t/xml_files/dir
     #output where significance table will be saved
-  sigmaoutput: /home/irene/github/GRB_significance/notebooks/examples/Event84.North.iterations.noMoon.thresh24.hidden.npy
+  sigmaoutput: /path/to/output.npy
 
 save_log: False
 # leave empty if both sites must to be analysed
@@ -27,7 +27,8 @@ seed:
 speed_up: True
 #parameters to use for simulation with ctools
 ctools:
-   t_stop: #87322.5
+   # stop time in seconds (delta_T). Null to integrate for total vis time
+   t_stop: 
    #maximum value of energy up to wich simualte (TeV)
    emax : 10.0
    #calibration database       
